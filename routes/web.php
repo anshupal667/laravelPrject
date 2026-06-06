@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,3 +17,5 @@ Route::get('/info', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::resource('todos', TodoController::class);
